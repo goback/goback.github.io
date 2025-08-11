@@ -23,7 +23,8 @@
     daum.postcode.load(function() {
         new daum.Postcode({
           oncomplete: function(data) {
-            window.Flutter.postMessage(JSON.stringify({'address': data.address, 'zoncode': data.zoncode}));
+            // window.Flutter.postMessage(JSON.stringify({'address': data.address, 'zoncode': data.zoncode}));
+            window.Flutter.postMessage(JSON.stringify(data));
           },
           width : '100%',
           height : '100%',
